@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+Results:
+<table>
+  <tr>
+   <th>Question</th>
+   <th>Your Response</th>
+  </tr>
+{% for f in form_data %}
+  {% for k, v in f %}
+  <tr>
+     <td>{{k}}</td>
+     <td>{{v}}</td>
+  </tr>
+  {% endfor %}
+{% endfor %}
+</table>
+
+{% endblock %}

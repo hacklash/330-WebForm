@@ -6,7 +6,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^survey/$', SurveyWizard([ControllerForm, GateForm, ScrollingForm])),
+    (r'^survey/$', SurveyWizard([ControllerForm, GateForm, ScrollingForm,
+                                 HGameForm, VDeveloperForm, VCaveForm, VTreasureForm])),
     # Examples:
     url(r'^$', 'websurvey.views.home', name='home'),
     url(r'^websurvey/', include('websurvey.foo.urls')),
